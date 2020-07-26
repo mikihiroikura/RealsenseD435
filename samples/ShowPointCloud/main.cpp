@@ -1,5 +1,8 @@
 #include <librealsense2/rs.hpp>
 #include <opencv2/opencv.hpp>
+#define GL_SILENCE_DEPRECATION
+#define GLFW_INCLUDE_GLU
+#include <GLFW/glfw3.h>
 
 int main() {
 
@@ -38,6 +41,7 @@ int main() {
 		
 		int key = cv::waitKey(10);
 		if (key == 'q')break;
+
 	}
 
 	return 0;
