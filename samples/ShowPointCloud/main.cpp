@@ -65,6 +65,7 @@ int main(int argc, char* argv[]) try
         // Upload the color frame to OpenGL
         app_state.tex.upload(color);
 
+        //‰ñ“]“®ì‚ğ‰Á‚¦‚Ä‚İ‚é
         app_state.pitch += 1;
 
         // Draw the pointcloud

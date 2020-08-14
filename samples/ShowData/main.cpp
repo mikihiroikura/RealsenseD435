@@ -8,6 +8,8 @@ using namespace std;
 int main() {
 	rs2::pipeline pipe;
 	rs2::config config;
+    LARGE_INTEGER freq, start, stop;
+    if (!QueryPerformanceFrequency(&freq)) return 0;
 
 	config.enable_stream(RS2_STREAM_COLOR, 1920, 1080, RS2_FORMAT_BGR8, 30);
     config.enable_stream(RS2_STREAM_DEPTH, 1280, 720, RS2_FORMAT_Z16, 30);
@@ -26,6 +28,7 @@ int main() {
 
     while (true)
     {
+        if (!QueryPerformanceCounter(&start)) return 0;
         frames = pipe.wait_for_frames();
 
         //Get each frame
@@ -44,6 +47,9 @@ int main() {
 
         int key = cv::waitKey(10);
         if (key == 'q')break;
+        if (!QueryPerformanceCounter(&stop)) return 0;
+        double logtime = (double)(stop.QuadPart - start.QuadPart) / freq.QuadPart;
+        cout << "one roop time: " << logtime << endl;
     }
 
 
