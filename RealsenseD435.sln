@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShowData", "samples\ShowDat
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShowPointCloud", "samples\ShowPointCloud\ShowPointCloud.vcxproj", "{4A0A6530-1A80-4D88-8058-476FF81FC0B6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultipleRealsense", "MultipleRealsense\MultipleRealsense.vcxproj", "{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{4A0A6530-1A80-4D88-8058-476FF81FC0B6}.Release|x64.Build.0 = Release|x64
 		{4A0A6530-1A80-4D88-8058-476FF81FC0B6}.Release|x86.ActiveCfg = Release|Win32
 		{4A0A6530-1A80-4D88-8058-476FF81FC0B6}.Release|x86.Build.0 = Release|Win32
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Debug|x64.ActiveCfg = Debug|x64
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Debug|x64.Build.0 = Debug|x64
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Debug|x86.Build.0 = Debug|Win32
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Release|x64.ActiveCfg = Release|x64
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Release|x64.Build.0 = Release|x64
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Release|x86.ActiveCfg = Release|Win32
+		{C2B0477D-5FBF-41CE-9F57-6E89F9A096CD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

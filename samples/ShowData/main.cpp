@@ -10,7 +10,7 @@ int main() {
 	rs2::config config;
 
 	config.enable_stream(RS2_STREAM_COLOR, 1920, 1080, RS2_FORMAT_BGR8, 30);
-    config.enable_stream(RS2_STREAM_DEPTH, 640, 480, RS2_FORMAT_Z16, 30);
+    config.enable_stream(RS2_STREAM_DEPTH, 1280, 720, RS2_FORMAT_Z16, 30);
 
 	pipe.start(config);
 
@@ -34,7 +34,7 @@ int main() {
 
         // Creating OpenCV Matrix from a color image
         cv::Mat color(cv::Size(1920, 1080), CV_8UC3, (void*)color_frame.get_data(), cv::Mat::AUTO_STEP);
-        cv::Mat depth(cv::Size(640, 480), CV_8UC3, (void*)depth_frame.get_data(), cv::Mat::AUTO_STEP);
+        cv::Mat depth(cv::Size(1280, 720), CV_8UC3, (void*)depth_frame.get_data(), cv::Mat::AUTO_STEP);
 
         // Display in a GUI
         cv::namedWindow("Display Color Image", cv::WINDOW_AUTOSIZE);
