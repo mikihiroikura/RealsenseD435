@@ -9,13 +9,8 @@ using namespace std;
 class realsense
 {
 private:
-	cv::Mat colorimg;
-	cv::Mat depthimg;
-	rs2::frame colorframe;
-	rs2::frame depthframe;
 	rs2::pipeline pipe;
 	rs2::frameset frames;
-	string serial_num;
 
 	//Color img
 	unsigned int color_width = 1920;
@@ -28,9 +23,19 @@ private:
 	unsigned int depth_fps = 30;
 
 public:
+	rs2::frame colorframe;
+	rs2::frame depthframe;
+	rs2::frame depthframe_filter;
+	cv::Mat colorimg;
+	cv::Mat depthimg;
+	rs2::points points;
+	string serial_num;
+	
 	realsense(string serial_num);
+	realsense(string num, rs2_format colorformat, rs2_format depthformat);
 	void update_frame();
 	void update_color_img();
 	void update_depth_img();
+	void calc_pointcloud();
 };
 
